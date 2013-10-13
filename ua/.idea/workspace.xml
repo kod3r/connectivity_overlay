@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b327e4a-81d2-4941-9042-90e7384e259c" name="Default" comment="index.html, bootstrap code copied from wikipedia&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ua/tileserver.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ua/templates/index.html" afterPath="$PROJECT_DIR$/ua/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ua.iml" afterPath="$PROJECT_DIR$/.idea/ua.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ua/urls.py" afterPath="$PROJECT_DIR$/ua/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ua/views.py" afterPath="$PROJECT_DIR$/ua/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ua/tileserver.py" afterPath="$PROJECT_DIR$/ua/tileserver.py" />
     </list>
     <ignored path="ua.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +39,7 @@
       <file leaf-file-name="tileserver.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ua/tileserver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="62" selection-end="62" vertical-scroll-proportion="0.15393387" vertical-offset="0" max-vertical-offset="877">
+            <state line="7" column="0" selection-start="77" selection-end="77" vertical-scroll-proportion="0.21550742" vertical-offset="0" max-vertical-offset="877">
               <folding />
             </state>
           </provider>
@@ -565,7 +559,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ua/tileserver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="62" selection-end="62" vertical-scroll-proportion="0.15393387" vertical-offset="0" max-vertical-offset="877">
+        <state line="7" column="0" selection-start="77" selection-end="77" vertical-scroll-proportion="0.21550742" vertical-offset="0" max-vertical-offset="877">
           <folding />
         </state>
       </provider>
