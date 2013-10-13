@@ -1,13 +1,22 @@
 from django.conf.urls import patterns, include, url
 
 from ua.views import index
+from tileserver import render_tile
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
+from django.http import HttpResponse
+
+
+def test_return(request, num1, num2, num3):
+    return HttpResponse("Input numbers:" + str(num1) + str(num2) + str(num3))
+
 urlpatterns = patterns('',
-    url(r'^.*$', index)
+    url(r'^$', index),
+    url(r'tile/(\d+)/(\d+)/(\d+)/$', test_return),
+
 
     # Examples:
     # url(r'^$', 'ua.views.home', name='home'),

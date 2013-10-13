@@ -8,6 +8,9 @@
     <title>Example of Twitter Bootstrap</title>
     <!-- Include the bootstrap stylesheets -->
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+
+    <!-- Include Leaflet.js CSS files -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
   </head>
 
   <body>
@@ -47,58 +50,47 @@
         </tbody>
       </table>
     </div>
-    <!-- JavaScript placed at the end of the document so the pages load faster -->
-    <!-- Optional: Include the jQuery library -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
-    <!-- Optional: Incorporate the Bootstrap Javascript plugins -->
-    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-  </body>
-</html>
 
 
-    <title>Example of Twitter Bootstrap</title>
-    <!-- Include the bootstrap stylesheets -->
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-  </head>
-
-  <body>
-    <div class="container">
-      <h1>Search</h1>
-      <label>Example for a simple search form.</label>
-
-      <!-- Search form with input field and button -->
-      <form class="well form-search">
-        <input type="text" class="input-medium search-query">
-        <button type="submit" class="btn btn-primary">Search</button>
-      </form>
-
-      <h2>Results</h2>
-
-      <!-- Table with alternating cell background color and outer frame -->
-      <table class="table table-striped table-bordered">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Title</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Lorem ipsum dolor ...</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Ut enim ad minim veniam, ...</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Duis aute irure dolor ...</td>
-          </tr>
-        </tbody>
-      </table>
+    <div id="url_text">
+        <style> #url_text {height: 30px; width:200px; float:none; margin: 0 auto;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 90px
+        } </style>
+        <body>
+            Hi this is some text.
+        </body>
     </div>
+
+
+    <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+
+    <div id="map">
+        <style> #map { height: 580px; width: 780px; float:none; margin: 0 auto;} </style>
+
+        <script>
+            zoom = 13;
+            lat = 42.3482;
+            lon = 75.1890;
+            var map = L.map('map').setView([lat, lon], zoom);
+30
+            n = 2 ^ zoom;
+            xtile = Math.floor(((lon + 180) / 360) * n);
+            ytile = Math.floor((1 - (Math.log(Math.tan(lat) + (1 / Math.cos(lat))) / Math.PI)) / 2 * n);
+
+            url_str = 'http://tile.cloudmade.com/ab33f98425214ab49f6b166ed175bd66/997/256/' + zoom.toString() + '/' + xtile.toString() + '/' + ytile.toString() + '.png'
+            document.getElementById('url_text').innerHTML = url_str;
+
+            /* window.confirm("URL str is: " + url_str); */
+
+            L.tileLayer(url_str,
+                    {attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+                    maxZoom: zoom}).addTo(map);
+
+        </script>
+    </div>
+
     <!-- JavaScript placed at the end of the document so the pages load faster -->
     <!-- Optional: Include the jQuery library -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
